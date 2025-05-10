@@ -1,0 +1,10 @@
+CREATE TABLE cameras (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    room VARCHAR(50) DEFAULT 'Standard',
+    status BOOLEAN DEFAULT true,
+    settings JSON,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); 
