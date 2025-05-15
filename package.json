@@ -9,7 +9,7 @@
     "lint:server": "eslint --fix .",
     "lint:ui": "npm run lint --prefix ui",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand --forceExit --detectOpenHandles --config ./test/jest.config.cjs",
-    "watch": "chcp 65001 && concurrently \"npm run watch:server\" \"npm run watch:ui\"",
+    "watch": "concurrently \"npm run watch:server\" \"npm run watch:ui\"",
     "watch:server": "nodemon",
     "watch:ui": "npm run serve --prefix ui",
     "prepublishOnly": "npm i --package-lock-only && npm run lint && npm run build"
